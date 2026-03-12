@@ -45,10 +45,7 @@ const connectDB = async () => {
     console.log("✅ Successfully connected to MongoDB!");
     
     // Also connect Mongoose for ORM functionality
-    await mongoose.connect(uri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(uri);
     console.log("✅ Mongoose connected successfully");
     
     return client;
